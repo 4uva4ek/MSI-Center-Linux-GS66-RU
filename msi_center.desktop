@@ -1,0 +1,8 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=MSI Center
+Exec=/bin/bash /home/dev/Programs/OpenFreezeCenter/run.sh
+Icon=/home/dev/Programs/OpenFreezeCenter/msi.png
