@@ -29,7 +29,7 @@ def corrections(lines):
     return
 
 window = Tk()
-dpi_base = 76
+dpi_base = 60
 dpi = window.winfo_fpixels('1i')
 dpi_scale = round(dpi/dpi_base)
 dpi_scale_reducer = 0
@@ -141,47 +141,52 @@ def sct_val(val):
     lable_gt7.config(text = str(sgt7.get()) + "%")
     return
 
+dpi_step=50
+
 sct1 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct1.place(x = dpi_scale * 10, y = dpi_scale * 50)
+sct1.place(x = dpi_scale *10 , y = dpi_scale * dpi_step)
 sct1.set(v[1])
 sct2 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct2.place(x = dpi_scale * 60, y = dpi_scale * 50)
+sct2.place(x = dpi_scale * 60, y = dpi_scale * dpi_step)
 sct2.set(v[2])
 sct3 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct3.place(x = dpi_scale * 110, y = dpi_scale * 50)
+sct3.place(x = dpi_scale * 110, y = dpi_scale * dpi_step)
 sct3.set(v[3])
 sct4 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct4.place(x = dpi_scale * 160, y = dpi_scale * 50)
+sct4.place(x = dpi_scale * 160, y = dpi_scale * dpi_step)
 sct4.set(v[4])
 sct5 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct5.place(x = dpi_scale * 210, y = dpi_scale * 50)
+sct5.place(x = dpi_scale * 210, y = dpi_scale * dpi_step)
 sct5.set(v[5])
 sct6 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct6.place(x = dpi_scale * 260, y = dpi_scale * 50)
+sct6.place(x = dpi_scale * 260, y = dpi_scale * dpi_step)
 sct6.set(v[6])
 sct7 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sct7.place(x = dpi_scale * 310, y = dpi_scale * 50)
+sct7.place(x = dpi_scale * 310, y = dpi_scale * dpi_step)
 sct7.set(v[7])
+
+dpi_step_gpu=dpi_step+280
+
 sgt1 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt1.place(x = dpi_scale * 10, y = dpi_scale * 330)
+sgt1.place(x = dpi_scale * 10, y = dpi_scale * dpi_step_gpu)
 sgt1.set(v[8])
 sgt2 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt2.place(x = dpi_scale * 60, y = dpi_scale * 330)
+sgt2.place(x = dpi_scale * 60, y = dpi_scale * dpi_step_gpu)
 sgt2.set(v[9])
 sgt3 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt3.place(x = dpi_scale * 110, y = dpi_scale * 330)
+sgt3.place(x = dpi_scale * 110, y = dpi_scale * dpi_step_gpu)
 sgt3.set(v[10])
 sgt4 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt4.place(x = dpi_scale * 160, y = dpi_scale * 330)
+sgt4.place(x = dpi_scale * 160, y = dpi_scale * dpi_step_gpu)
 sgt4.set(v[11])
 sgt5 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt5.place(x = dpi_scale * 210, y = dpi_scale * 330)
+sgt5.place(x = dpi_scale * 210, y = dpi_scale * dpi_step_gpu)
 sgt5.set(v[12])
 sgt6 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt6.place(x = dpi_scale * 260, y = dpi_scale * 330)
+sgt6.place(x = dpi_scale * 260, y = dpi_scale * dpi_step_gpu)
 sgt6.set(v[13])
 sgt7 = Scale(window, from_ = 150, to = 0, orient = VERTICAL, length = dpi_scale * 200, showvalue = 0, tickinterval = 5, resolution = 5, fg = 'white', bg = 'black', command = sct_val)
-sgt7.place(x = dpi_scale * 310, y = dpi_scale * 330)
+sgt7.place(x = dpi_scale * 310, y = dpi_scale * dpi_step_gpu)
 sgt7.set(v[14])
 
 def adv_apply():
